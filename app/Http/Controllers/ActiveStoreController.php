@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ActiveStoreRequest;
 use App\Models\InviteCode;
 use Illuminate\Http\Request;
 use App\Rules\InviteCodeHasQuantity;
@@ -24,18 +25,7 @@ class ActiveStoreController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request)
+    public function __invoke(ActiveStoreRequest $request)
     {
-        $code = InviteCode::where('code', $request->code)->first();
-
-        $this->validate($request, [
-            'code' => [
-                'required',
-                'exists:invite_codes,code',
-                'bail',
-                new InviteCodeHasQuantity($code),
-                new InviteCodeNotExpired($code),
-            ],
-        ]);
     }
 }
