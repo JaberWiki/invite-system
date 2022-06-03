@@ -27,5 +27,6 @@ class ActiveStoreController extends Controller
      */
     public function __invoke(ActiveStoreRequest $request)
     {
+        dd('Acctivated');
     }
 }
