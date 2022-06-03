@@ -31,6 +31,7 @@ class ActiveStoreController extends Controller
             'code' => [
                 'required',
                 'exists:invite_codes,code',
+                'bail',
                 new InviteCodeHasQuantity($code),
             ],
         ]);
