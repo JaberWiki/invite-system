@@ -25,8 +25,12 @@
                         <div class="flex items-center justify-between">
                             <div class="flex-1">
                                 <div class="text-sm leading-5 font-medium text-gray-900">
-                                    {{ $inviteCode->code }}
-                                    ({{ $inviteCode->quantity_used }}/{{ $inviteCode->quantity }} uses)
+                                    @if($inviteCode->approved())
+                                        {{ $inviteCode->code }}
+                                        ({{ $inviteCode->quantity_used }}/{{ $inviteCode->quantity }} uses)
+                                    @else
+                                        Your request is pending.
+                                    @endif
                                 </div>
                             </div>
                             <div class="flex-1 text-right">

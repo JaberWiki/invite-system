@@ -23,6 +23,11 @@ class InviteCode extends Model
         return $this->quantity > $this->quantity_used;
     }
 
+    public function approved()
+    {
+        return !is_null($this->approved_at);
+    }
+
     public function hasExpired()
     {
         return $this->expires_at?->lt(now());
