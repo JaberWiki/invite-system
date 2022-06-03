@@ -27,6 +27,8 @@ class ActiveStoreController extends Controller
      */
     public function __invoke(ActiveStoreRequest $request)
     {
-        return view('activate.index');
+        
+
+        dd('testing');
     }
 }
