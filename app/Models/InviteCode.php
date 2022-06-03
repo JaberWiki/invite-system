@@ -22,4 +22,9 @@ class InviteCode extends Model
     {
         return $this->quantity > $this->quantity_used;
     }
+
+    public function hasExpired()
+    {
+        return $this->expires_at?->lt(now());
+    }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\InviteCode;
 use Illuminate\Http\Request;
 use App\Rules\InviteCodeHasQuantity;
+use App\Rules\InviteCodeNotExpired;
 
 class ActiveStoreController extends Controller
 {
@@ -33,6 +34,7 @@ class ActiveStoreController extends Controller
                 'exists:invite_codes,code',
                 'bail',
                 new InviteCodeHasQuantity($code),
+                new InviteCodeNotExpired($code),
             ],
         ]);
     }
