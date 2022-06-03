@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'activated_at'
     ];
 
     /**
@@ -52,5 +53,12 @@ class User extends Authenticatable
     public function active()
     {
         return !is_null($this->activated_at);
+    }
+
+    public function activate()
+    {
+        $this->update([
+            'activated_at' => now()
+        ]);
     }
 }

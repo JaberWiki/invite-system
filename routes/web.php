@@ -22,7 +22,6 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['auth', 'activated']], function () {
     Route::get('/dashboard', function ( Request $request ) {
-        dd($request->user()->active());
         return view('dashboard');
     })->name('dashboard');
 });

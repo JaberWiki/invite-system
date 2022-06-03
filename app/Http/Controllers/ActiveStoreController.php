@@ -27,8 +27,10 @@ class ActiveStoreController extends Controller
      */
     public function __invoke(ActiveStoreRequest $request)
     {
-        
+        $request->user()->activate();
 
-        dd('testing');
+        $request->inviteCode->increment('quantity_used');
+
+        return redirect()->route('dashboard');
     }
 }

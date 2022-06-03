@@ -9,7 +9,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class ActiveStoreRequest extends FormRequest
 {
-    protected ?InviteCode $inviteCode;
+    public ?InviteCode $inviteCode;
     /**
      * Determine if the user is authorized to make this request.
      *
