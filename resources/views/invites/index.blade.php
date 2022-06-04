@@ -20,14 +20,14 @@
                         </div>
                     @endif
                     <div class="mt-8">
-                        <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center justify-between mb-4 bg-blue-500 p-4 rounded">
                             <div class="flex-1">
-                                <div class="text-sm leading-5 font-medium text-gray-900">
+                                <div class="text-sm leading-5 text-white font-bold">
                                     Invite Codes
                                 </div>
                             </div>
                             <div class="flex-1 text-right">
-                                <div class="text-sm leading-5 text-gray-500">
+                                <div class="text-sm leading-5 text-white font-bold">
                                     Created At
                                 </div>
                             </div>
@@ -37,10 +37,17 @@
                                 <div class="flex-1">
                                     <div class="text-sm leading-5 font-medium text-gray-900">
                                         @if ($inviteCode->approved())
-                                            {{ $inviteCode->code }}
+                                            <span x-data
+                                                x-on:click="window.navigator.clipboard.writeText($el.innerText)">
+                                                <x-button class="mb-2 normal-case mr-2" title="Click to copy the code!">
+                                                    {{ $inviteCode->code }}
+                                                </x-button>
+                                            </span>
                                             ({{ $inviteCode->quantity_used }}/{{ $inviteCode->quantity }} uses)
                                         @else
-                                            Your request is pending.
+                                            <x-button class="mb-2 normal-case mr-2 bg-orange-600">
+                                                Your request is pending.
+                                            </x-button>
                                         @endif
                                     </div>
                                 </div>
