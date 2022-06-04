@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('code')->unique();
             $table->foreignId('user_id')->nullable()->constrained();
             $table->integer('quantity')->unsigned();
-            $table->integer('quantity_used')->unsigned();
+            $table->integer('quantity_used')->unsigned()->default(0);
             $table->timestamp('expires_at')->nullable();
             $table->timestamp('approved_at')->nullable();
             $table->timestamps();

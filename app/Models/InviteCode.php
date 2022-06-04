@@ -13,6 +13,11 @@ class InviteCode extends Model
         'code'
     ];
 
+    protected $attributes = [
+        'quantity' => 5,
+        'quantity_used' => 0,
+    ];
+
     protected $casts = [
         'expires_at' => 'datetime',
         'approved_at' => 'datetime',
