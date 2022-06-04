@@ -2,25 +2,25 @@
 <h1 align="center"> Laravel Invitation management system </h1>
 <h3 align="center">	Author: Mohammad Jaber </h3>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Features:
 
-## About Laravel
+User can register and invite other user by invitaion code.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Used Laravel Breeze for Authentication.
+- Used middelware for active user.
+- Create an invition code followed by validation rules.
+- Cheack if the Invite Code is expired.
+- Listing a Invition Code.
+- User can request for Invite Code.
+- User can request Invite Code within a spacific limit.
+- User can also check when did they requested for Invite Code.
+- User can check how many time his invite code used.
+- Blcok the code usage after a certain limit of that code usage.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Validation rules: 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-
+- Check if user is active.
+- Check if code is valide.
+- Check the code expiration date.
+- Check how many invition code usage remaining.
+- Check if code usage limit.
