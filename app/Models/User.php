@@ -56,6 +56,11 @@ class User extends Authenticatable
         return !is_null($this->activated_at);
     }
 
+    public function reachedInviteCodeRequestLimit()
+    {
+        return $this->inviteCodes()->count() >= env('MAX_INVITE_CODE_LIMIT');
+    }
+
     public function activate()
     {
         $this->update([
