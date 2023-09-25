@@ -29,7 +29,7 @@ User can register and invite other user by invitaion code.
 
 Follow these steps to set up and run the project locally.
 
-### Prerequisites
+## Prerequisites
 
 Make sure you have the following installed:
 
@@ -39,7 +39,7 @@ Make sure you have the following installed:
 - MySQL
 - Laravel 9.*
 
-### Installation Steps
+## Installation Steps
 
 1. **Clone the GitHub repository**
    ```sh
