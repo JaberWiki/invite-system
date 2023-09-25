@@ -24,3 +24,69 @@ User can register and invite other user by invitaion code.
 - Check the code expiration date.
 - Check how many invition code usage remaining.
 - Check if code usage limit.
+
+# Installation Guide
+
+Follow these steps to set up and run the project locally.
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Git
+- Composer
+- PHP >= 8.*
+- MySQL
+- Laravel 9.*
+
+### Installation Steps
+
+1. **Clone the GitHub repository**
+   ```sh
+   git clone https://github.com/JaberWiki/invite-system.git
+   
+2. **Install Composer packages:**
+   ```sh
+   composer install
+   
+3. **Create .env file**
+
+   Duplicate .env.example and rename it to .env.
+   
+   or
+   
+   ```bash
+   cp .env.example .env
+   ```
+   
+5. **Generate encryption key**
+
+    Run the following command to generate a unique application key.
+    
+      ```sh
+    php artisan key:generate
+
+6. **Run migrations**
+
+      ```sh
+    php artisan migrate
+
+7. **Add Invite code limit in .env**
+
+    ```sh
+    MAX_INVITE_CODE_LIMIT
+
+7. **Start the development server**
+
+      ```sh
+    php artisan serve
+   
+
+## Contributor
+
+- [Hossain Mohammad Shahidullah Jaber](https://github.com/JaberWiki). (jaberphpdev@gmail.com)
+   
+
+## License
+- Copyright © 2023 Invextry
+- **Invextry is open-sourced software licensed under the MIT license**
