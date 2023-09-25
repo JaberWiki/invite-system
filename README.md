@@ -85,8 +85,8 @@ Make sure you have the following installed:
 ## Contributor
 
 - [Hossain Mohammad Shahidullah Jaber](https://github.com/JaberWiki). (jaberphpdev@gmail.com)
-   
+
 
 ## License
-- Copyright © 2023 Invextry
-- **Invextry is open-sourced software licensed under the MIT license**
+
+This Project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
